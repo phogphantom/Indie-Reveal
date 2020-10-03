@@ -1,0 +1,614 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.container {
+    min-height:100%;
+    position:relative;
+}
+.header {
+    padding:0;
+    margin:0;
+    position: fixed;
+    top:0;
+    z-index: 999;
+}
+.body {
+    padding-top:0;
+    padding-bottom:60px;	/* Height of the footer */
+    margin-top:0;
+    overflow: hidden;
+}
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;			/* Height of the footer */
+    background:#0e273c;
+    color: #e9ecec;
+}
+/*fonts to use
+font-family: 'Fira Mono', monospace;
+font-family: 'Roboto Slab', serif;
+ */
+/*nav style start*/
+.index_body {
+    background: hsla(220, 8%, 92%, 1);
+    background: linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
+
+}
+
+.header {
+    position: sticky;
+    top:0;
+}
+header {
+    height: 100%;
+}
+
+.nav ul {
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding: 0 0 5px 5px;
+}
+.nav li {
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding: 0 0 5px 5px;
+}
+.nav a {
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding: 0 0 5px 5px;
+}
+.nav{
+    background-color:#232929;
+    height:50px;
+    display:flex;
+    justify-content: center;
+}
+
+.nav_img{
+    background-color:gray;
+    width:50px;
+    height:50px;
+}
+
+
+
+.nav_list a {
+    font-family: 'Fira Mono', monospace;
+    padding:.625em;
+    text-decoration: none;
+    padding-left:1.875em;
+    padding-right:1.875em;
+    font-size: 1.25em;
+    color: #d2dfdf;
+}
+.nav_list a:hover{
+    color:white;
+    text-decoration: underline;
+}
+.nav h1 {
+    font-family: 'Cinzel', serif;
+
+}
+
+/*nav style end */
+/*index start*/
+
+.main_inner_wrapper {
+    width:85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    border-bottom-left-radius: 1.5625em;
+    border-bottom-right-radius: 1.5625em;
+    min-height: 50vh;
+}
+.header_logo_title {
+    background-color: dimgray;
+    height: 8em;
+    width:85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    border-top-left-radius: 1.5625em;
+    border-top-right-radius: 1.5625em;
+}
+/*main start*/
+
+.sub-title {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    text-align: center;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vh;
+    border-bottom: 2px solid #232929;
+    padding-bottom: 1vh;
+    box-shadow: 0 4px 4px -4px #232929;
+}
+.featured {
+    min-height:500px;
+    width:100%;
+}
+.section-title {
+    border-bottom: .01vh solid #232929;
+    margin-bottom: 2vh;
+    margin-top: 4vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Cinzel', serif;
+}
+.section-title h2 {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    padding-left: 1vw;
+}
+
+.featured-slider {
+    color:white;
+    text-align: center;
+    font-size: 1em;
+    min-height: 500px;
+    background-color: dimgray;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1vh;
+}
+
+.featured-slider h2 {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+
+.featured-slider h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+.featured-slider span {
+    border-bottom: 2px solid white;
+}
+.featured-slider span:hover {
+    border-bottom: none;
+}
+
+.featured-slider p {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+.featured-slider a {
+    text-decoration: none;
+}
+.featured-slider a:hover {
+    color: #232929;
+}
+.featured-slider a:active {
+    color: #0e273c;
+}
+.featured-slider a:visited {
+    color: #0e273c;
+}
+.newest-slider {
+    color:white;
+    text-align: center;
+    font-size: 1em;
+    min-height: 500px;
+    background-color: dimgray;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+
+.newest-slider h2 {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+
+.newest-slider h3 {
+    font-family: 'Fira Mono', monospace;
+    font-size: 4em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+.newest-slider span {
+    border-bottom: 2px solid white;
+}
+.newest-slider span:hover {
+    border-bottom: none;
+}
+
+.newest-slider p {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    margin-bottom: 2vh;
+    padding: 10px;
+}
+.newest-slider a:hover {
+    color: #232929;
+}
+.screen-shots {
+    color:black;
+    font-size: 1em;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: center;
+}
+.screen-shots img {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding:10px;
+    margin: 1vw 1vh;
+}
+/*main end*/
+/*index end*/
+/*submit page start*/
+.page-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 4px solid #232929;
+    color: #232929;
+    box-shadow: 0 6px 6px -6px #232929;
+}
+.page-title h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 2.5vh;
+    text-shadow: 2px 2px 4px #232929;
+}
+.form-sub-title {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    text-align: center;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vh;
+}
+#form-disclaimer {
+    font-size: .75em;
+    margin-top: 4vh;
+    margin-bottom: 0;
+}
+.form-wrapper {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+.frm{
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.25em;
+    width:50%;
+    margin: .5vh .5vw;
+    padding:10px;
+    background-color: #e9ecec;
+    border: 2px solid #232929;
+    border-radius: 5px;
+}
+.frm-label-check {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    text-align: right;
+}
+.form-titles {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    border-bottom: 2px solid #232929;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.frm:invalid {
+    color: grey;
+}
+.frm option {
+    color: #232929;
+}
+
+.submit-btn {
+    background-color: #232929;
+    color: #e9ecec;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+.submit-btn:hover {
+    background-color: transparent;
+    color: #232929;
+    border: 2px solid #232929;
+    transform: scale(1.1,1.1);
+}
+/*submit end*/
+/*full list start*/
+.list-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+.filter-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1vw;
+    padding: 10px;
+    align-items: baseline;
+    border-bottom: 2px solid #232929;
+}
+.filter-wrapper h2 {
+    font-family: 'Fira Mono', monospace;
+    color: #232929;
+    font-size: 1em;
+    padding: 10px;
+}
+.search{
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    width:100%;
+    padding:10px;
+    background-color: #e9ecec;
+    border: 2px solid #232929;
+    border-radius: 5px;
+}
+.filter {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    width:100%;
+    padding:10px;
+    background-color: #e9ecec;
+    border: 2px solid #232929;
+    border-radius: 5px;
+}
+.filter:invalid {
+    color: grey;
+}
+.filter option {
+    color: #232929;
+}
+.list {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.list-section-title {
+    border-bottom: .01vh solid #232929;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Cinzel', serif;
+    font-size: .9em;
+}
+.table-headings {
+    display: flex;
+    justify-content: space-evenly;
+}
+.table-headings h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+.list-table {
+    font-family: 'Fira Mono', monospace;
+    border-collapse: collapse;
+    width: 100%;
+}
+.list-table a {
+    color: #232929;
+    font-family: 'Fira Mono', monospace;
+    padding:10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.list-table a:hover {
+    font-weight: normal;
+
+}
+.list-table td {
+    font-size: 1.5em;
+    border-bottom: 2px solid #232929;
+    padding-bottom: 1vh;
+    padding-right:9vw;
+    overflow: hidden;
+}
+.list-table tr:nth-child(odd) {
+    background-color: #e9ecec;
+}
+
+/*list end*/
+/*game template start*/
+.game-temp-page-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 4px solid #e9ecec;
+    color: #e9ecec;
+    box-shadow: 0 6px 6px -6px #e9ecec;
+}
+.game-temp-page-title h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px #232929;
+}
+.game-video {
+    background-image: url("imgs/hades-2.jpg");
+    width: 100%;
+    max-height: 655px;
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 10px 10px -10px #232929;
+}
+.game-video p {
+    color: #e9ecec;
+    font-family: 'Fira Mono', monospace;
+    text-align: center;
+    font-size: 1em;
+}
+
+.game-video img{
+    width: 150px;
+    height: 150px;
+    padding:10px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -60px;
+    margin-top: -52px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.75));
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+
+}
+.game-video img:hover {
+    transform: scale(1.15);
+
+}
+.main-page {
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.game-temp-section-title {
+    border-bottom: .01vh solid #232929;
+    margin-bottom: 2vh;
+    margin-top: 4vh;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+.game-temp-screen-shots {
+    color:black;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.game-temp-screen-shots img {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    padding:10px;
+    margin: 1vw 1vh;
+}
+.desc-box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.desc-box p {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.15em;
+    width: 75%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:10px;
+}
+.desc-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+
+}
+.quick-fact {
+    float: left;
+    margin-top: 2vh;
+    border: 2px solid #232929;
+    padding: 10px;
+}
+.quick-fact h3 {
+    font-family: 'Cinzel', serif;
+    font-size:1.5em;
+    border-bottom: 1px solid #232929;
+    margin-bottom: .75vh;
+}
+.quick-fact-list {
+    font-family: 'Fira Mono', monospace;
+    text-decoration: none;
+    list-style-type: none;
+}
+.game-temp-links  {
+    display: flex;
+    justify-content: space-evenly;
+}
+.game-temp-links a {
+    color: #232929;
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.75em;
+    padding:10px;
+}
+.game-temp-links a:hover {
+    color: #e9ecec;
+    background: #232929;
+    border-radius: 15px;
+}
+.recommended-games-box {
+    width: 100%;
+    border: 2px solid #232929;
+    margin-bottom: 1vh;
+    margin-top: 10vh;
+    box-shadow: 0 10px 10px -10px #232929;
+}
+.recommended-games {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.recommended-games a {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    color: #232929;
+}
+.about-sub-title {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    text-align: center;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3vh;
+    padding-bottom: 1vh;
+}

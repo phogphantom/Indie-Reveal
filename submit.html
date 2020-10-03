@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit a Game</title>
+    <link rel="stylesheet" href="css/indie_reveal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body class="index_body">
+<div class="container">
+    <div class="header">
+        <header>
+            <div class ="nav">
+
+                <img class="nav_img" src="#" alt="50x50">
+                <nav class="nav_list">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="full-list.html">FULL LIST</a></li>
+                        <li><a href="submit.html">SUBMIT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+<div class="body">
+    <div class="page-title">
+        <h1>Submit your game</h1>
+    </div>
+    <div class="form-sub-title">
+        <p>Fill out this form to get your game on Indie Reveal! You put an immense amount of work into your game and
+            we at Indie Reveal want to make
+            sure your page looks exactly the way you envision. We will never post your game with-out your final go-ahead on all information.</p>
+        <p id="form-disclaimer">All required fields are marked with an *. We will be
+        in contact soon after submission!</p>
+    </div>
+    <div class="form-wrapper">
+        <form method="post">
+            <h2 class="form-titles">Game Information</h2>
+            <label for="game-name" class="frm-label">
+                <input required type="text" class="frm" id="game-name" name="game-name" placeholder="Game Name*">
+            </label>
+            <br>
+            <label for="genre" class="frm-label">
+            <select name="genre" id="genre" class="frm" required>
+                <option value="" disabled selected hidden>Genre*</option>
+                <option>Action-Adventure</option>
+                <option>Battle Royale</option>
+                <option>Fighting</option>
+                <option>First Person Shooter</option>
+                <option>Massively Multiplayer Online</option>
+                <option>Racing</option>
+                <option>Role Playing</option>
+                <option>Sandbox</option>
+                <option>Simulation</option>
+                <option>Sports</option>
+
+            </select>
+            </label>
+            <br>
+            <label for="sub-genre" class="frm-label">
+                <input type="text" class="frm" id="sub-genre" name="sub-genre" placeholder="Sub-Genre">
+            </label>
+            <label for="multiplayer" class="frm-label">
+                <select name="multiplayer" id="multiplayer" class="frm" required>
+                    <option value="" disabled selected hidden>Multiplayer*(y/n)</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </label>
+            <br>
+            <label for="release-date" class="frm-label">
+                <input required type="text" class="frm" id="release-date" name="genre" placeholder="Release Date*">
+            </label>
+            <br>
+            <label for="description" class="frm-label">
+                <textarea required id="description" class="frm description" placeholder="Full Description*"></textarea>
+            </label>
+            <br>
+            <h2 class="form-titles">Links</h2>
+            <label for="video" class="frm-label">
+                <input required type="text" class="frm" id="video" name="genre"
+                       placeholder="Trailer/Gameplay*(Youtube links)">
+            </label>
+            <br>
+            <label for="crowdsource" class="frm-label">
+                <input type="text" class="frm" id="crowdsource" name="genre" placeholder="Crowdsource">
+            </label>
+            <br>
+            <label for="game-site" class="frm-label">
+                <input type="text" class="frm" id="game-site" name="genre"
+                       placeholder="Game Site">
+            </label>
+            <br>
+            <h2 class="form-titles">Contact Information</h2>
+            <label for="creator-name" class="frm-label">
+                <input required type="text" class="frm" id="creator-name" name="genre"
+                       placeholder="Creator Name*(studio name/individual)">
+            </label>
+            <br>
+            <label for="email" class="frm-label">
+                <input required type="email" class="frm" id="email" name="genre" placeholder="Email*">
+            </label>
+            <br>
+            <br>
+            <input type="submit" class="submit-btn">
+        </form>
+
+    </div>
+</div>
+<div class="footer">
+</div>
+</div>
+</body>
+</html>
