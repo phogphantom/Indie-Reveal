@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d089f891-3570-4c91-8715-31e20d14bdde" name="Default Changelist" comment="First commit for Indie Reveal. Turning it in for html use">
+    <list default="true" id="d089f891-3570-4c91-8715-31e20d14bdde" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/imgs/darkest-dungeon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/imgs/discso-elysium.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/imgs/frostpunk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/imgs/hollowknight.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/imgs/into-the-breach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.indie-reveal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/indie_reveal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/indie_reveal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/full-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/full-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-page-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/game-page-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/submit.html" beforeDir="false" afterPath="$PROJECT_DIR$/submit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +26,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,16 +56,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/imgs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tomst\WebstormProjects\Web_dev_1_final\imgs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tomst\WebstormProjects\Web_dev_1_final\css\imgs" />
       <recent name="C:\Users\tomst\WebstormProjects\Web_dev_1_final\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tomst\WebstormProjects\Web_dev_1_final\imgs" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index">
@@ -73,10 +85,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.index" />
-      <item itemvalue="JavaScript Debug.submit" />
       <item itemvalue="JavaScript Debug.Game Page Temp." />
       <item itemvalue="JavaScript Debug.about" />
+      <item itemvalue="JavaScript Debug.index" />
+      <item itemvalue="JavaScript Debug.submit" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +121,15 @@
       <workItem from="1601641818783" duration="3161000" />
       <workItem from="1601666582099" duration="1996000" />
       <workItem from="1601688321584" duration="13283000" />
-      <workItem from="1601771578227" duration="630000" />
+      <workItem from="1601771578227" duration="1635000" />
+      <workItem from="1602635442864" duration="11000" />
+      <workItem from="1603478905727" duration="173000" />
+      <workItem from="1603497899133" duration="4998000" />
+      <workItem from="1603650400633" duration="967000" />
+      <workItem from="1603651868722" duration="1162000" />
+      <workItem from="1603757139410" duration="4270000" />
+      <workItem from="1603849479721" duration="1198000" />
+      <workItem from="1603854286555" duration="11258000" />
     </task>
     <task id="LOCAL-00001" summary="First commit for Indie Reveal. Turning it in for html use">
       <created>1601761724445</created>
@@ -118,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601761724445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed wording in submit page.">
+      <created>1601772285176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601772285176</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +153,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit for Indie Reveal. Turning it in for html use" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit for Indie Reveal. Turning it in for html use" />
+    <MESSAGE value="Changed wording in submit page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed wording in submit page." />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="96" key="#Deployment" timestamp="1601761530100">
@@ -141,19 +169,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="174" key="#Web_Browsers/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599256077695" />
-    <state x="410" y="97" width="1187" height="943" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601760032092">
+    <state x="410" y="97" width="1187" height="943" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603652429969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="328" y="70" width="950" height="754" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601399297471" />
-    <state x="410" y="97" width="1187" height="943" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601760032092" />
+    <state x="410" y="97" width="1187" height="943" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603652429969" />
     <state x="446" y="138" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600190085702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="446" y="138" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1600190085702" />
-    <state x="427" y="0" key="CommitChangelistDialog2" timestamp="1601762205980">
+    <state x="427" y="0" key="CommitChangelistDialog2" timestamp="1601772284684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="427" y="0" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601762205980" />
+    <state x="427" y="0" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601772284684" />
     <state x="678" y="217" key="FileChooserDialogImpl" timestamp="1599448203013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,14 +254,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1895" height="323" key="GridCell.Tab.3.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600033432140" />
-    <state x="416" y="69" key="SettingsEditor" timestamp="1601762109247">
+    <state x="416" y="69" key="SettingsEditor" timestamp="1601773001221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="416" y="69" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601762109247" />
-    <state x="452" y="184" key="Vcs.Push.Dialog.v2" timestamp="1601762054065">
+    <state x="416" y="69" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601773001221" />
+    <state x="452" y="184" key="Vcs.Push.Dialog.v2" timestamp="1601772337102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="184" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601762054065" />
+    <state x="452" y="184" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601772337102" />
     <state x="0" y="0" width="766" height="824" key="find.popup" timestamp="1600968503995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Game Page Temp.</title>
-    <link rel="stylesheet" href="css/indie_reveal.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/indie_reveal.css">
+
 </head>
 <body class="index_body">
-<div class="container">
-    <div class="header">
+<div class="container-custom">
+    <div class="header-custom">
         <header>
-            <div class ="nav">
+            <div class ="nav-custom">
 
                 <img class="nav_img" src="#" alt="50x50">
                 <nav class="nav_list">
@@ -25,15 +27,25 @@
             </div>
         </header>
     </div>
-    <div class="body">
+    <div class="body-custom">
 
         <div class="game-video">
             <div class="game-temp-page-title">
                 <h1>Game Title</h1>
             </div>
-            <a href="https://youtu.be/mD8x5xLHRho" target="_blank"><img src="css/imgs/play-btn.png" alt="play-btn"></a>
-            <p>Play button will be a modal for an iframe</p>
-            <p>background image is from a game, but is just to show what the hero image will look like</p>
+            <button type="button" class="modal-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="white"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+            </button>
+            <div id="trailerModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <iframe id="templateTrailer" width="768" height="432" src="https://www.youtube.com/embed/mD8x5xLHRho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main-page">
             <div class="quick-fact">
@@ -81,8 +93,13 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer-custom">
     </div>
 </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.indie-reveal.js"></script>
+
 </body>
 </html>

@@ -1,3 +1,11 @@
+/*TODO:
+finish footer
+redo table, maybe make the table into a template
+add in modal (bootstrap) for video
+do templating
+figure out how to get to template from image click
+ */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,27 +14,36 @@
 html,body {
     margin:0;
     padding:0;
-    height:100%;
+    min-height:100%;
+    background: hsla(212, 37%, 84%, 1);
+
+    background: linear-gradient(hsla(212, 37%, 84%, 1) 0%, hsla(212, 37%, 77%, 1) 52%, hsla(212, 37%, 55%, 1) 100%);
+
+    background: -moz-linear-gradient(hsla(212, 37%, 84%, 1) 0%, hsla(212, 37%, 77%, 1) 52%, hsla(212, 37%, 55%, 1) 100%);
+
+    background: -webkit-linear-gradient(hsla(212, 37%, 84%, 1) 0%, hsla(212, 37%, 77%, 1) 52%, hsla(212, 37%, 55%, 1) 100%);
+    background-repeat: no-repeat;
+
 }
-.container {
+.container-custom {
     min-height:100%;
     position:relative;
+
 }
-.header {
+.header-custom {
     padding:0;
     margin:0;
     position: fixed;
     top:0;
     z-index: 999;
 }
-.body {
+.body-custom {
     padding-top:0;
     padding-bottom:60px;	/* Height of the footer */
     margin-top:0;
     overflow: hidden;
 }
-.footer {
-    position:absolute;
+.footer-custom {
     bottom:0;
     width:100%;
     height:60px;			/* Height of the footer */
@@ -38,42 +55,33 @@ font-family: 'Fira Mono', monospace;
 font-family: 'Roboto Slab', serif;
  */
 /*nav style start*/
-.index_body {
-    background: hsla(220, 8%, 92%, 1);
-    background: linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
-    background: -moz-linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
-    background: -webkit-linear-gradient(180deg, hsla(220, 8%, 92%, 1) 0%, hsla(280, 21%, 92%, 1) 70%, hsla(295, 14%, 84%, 1) 100%);
 
-}
 
-.header {
+.header-custom {
     position: sticky;
     top:0;
-}
-header {
     height: 100%;
+    width: 100%;
 }
 
-.nav ul {
+
+.nav-custom ul {
     display:inline-block;
     text-decoration:none;
-    color:white;
     padding: 0 0 5px 5px;
 }
-.nav li {
+.nav-custom li {
     display:inline-block;
     text-decoration:none;
-    color:white;
     padding: 0 0 5px 5px;
 }
-.nav a {
+.nav-custom a {
     display:inline-block;
     text-decoration:none;
-    color:white;
     padding: 0 0 5px 5px;
 }
-.nav{
-    background-color:#232929;
+.nav-custom{
+    background-color:#0b1119;
     height:50px;
     display:flex;
     justify-content: center;
@@ -94,13 +102,13 @@ header {
     padding-left:1.875em;
     padding-right:1.875em;
     font-size: 1.25em;
-    color: #d2dfdf;
+    color: #fff3d6;
 }
 .nav_list a:hover{
-    color:white;
+    color:#feecbc;
     text-decoration: underline;
 }
-.nav h1 {
+.nav-custom h1 {
     font-family: 'Cinzel', serif;
 
 }
@@ -118,7 +126,7 @@ header {
     min-height: 50vh;
 }
 .header_logo_title {
-    background-color: dimgray;
+    background-color: white;
     height: 8em;
     width:85%;
     margin-right: auto;
@@ -137,16 +145,14 @@ header {
     margin-right: auto;
     margin-left: auto;
     margin-top: 3vh;
-    border-bottom: 2px solid #232929;
+    border-bottom: 2px solid #0b1119;
     padding-bottom: 1vh;
     box-shadow: 0 4px 4px -4px #232929;
+    color: #0b1119;
 }
-.featured {
-    min-height:500px;
-    width:100%;
-}
+
 .section-title {
-    border-bottom: .01vh solid #232929;
+    border-bottom: .01vh solid #0b1119;
     margin-bottom: 2vh;
     margin-top: 4vh;
     width: 80%;
@@ -158,100 +164,19 @@ header {
     font-size: 2em;
     font-family: 'Cinzel', serif;
     padding-left: 1vw;
+    font-weight: 700;
+    color: #1c2f45;
+
 }
 
-.featured-slider {
-    color:white;
+.slider-title {
     text-align: center;
-    font-size: 1em;
-    min-height: 500px;
-    background-color: dimgray;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 1vh;
-}
-
-.featured-slider h2 {
     font-family: 'Fira Mono', monospace;
-    font-size: 1em;
-    margin-bottom: 2vh;
-    padding: 10px;
+    color: #0b1119;
+    font-size: 2.5em;
+    padding:15px;
 }
 
-.featured-slider h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 4em;
-    margin-bottom: 2vh;
-    padding: 10px;
-}
-.featured-slider span {
-    border-bottom: 2px solid white;
-}
-.featured-slider span:hover {
-    border-bottom: none;
-}
-
-.featured-slider p {
-    font-family: 'Fira Mono', monospace;
-    font-size: 1.5em;
-    margin-bottom: 2vh;
-    padding: 10px;
-}
-.featured-slider a {
-    text-decoration: none;
-}
-.featured-slider a:hover {
-    color: #232929;
-}
-.featured-slider a:active {
-    color: #0e273c;
-}
-.featured-slider a:visited {
-    color: #0e273c;
-}
-.newest-slider {
-    color:white;
-    text-align: center;
-    font-size: 1em;
-    min-height: 500px;
-    background-color: dimgray;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top:1vh;
-    margin-bottom:1vh;
-}
-
-.newest-slider h2 {
-    font-family: 'Fira Mono', monospace;
-    font-size: 1em;
-    margin-bottom: 2vh;
-    padding: 10px;
-}
-
-.newest-slider h3 {
-    font-family: 'Fira Mono', monospace;
-    font-size: 4em;
-    margin-bottom: 2vh;
-    padding: 10px;
-}
-.newest-slider span {
-    border-bottom: 2px solid white;
-}
-.newest-slider span:hover {
-    border-bottom: none;
-}
-
-.newest-slider p {
-    font-family: 'Fira Mono', monospace;
-    font-size: 1.5em;
-    margin-bottom: 2vh;
-    padding: 10px;
-}
-.newest-slider a:hover {
-    color: #232929;
-}
 .screen-shots {
     color:black;
     font-size: 1em;
@@ -266,6 +191,9 @@ header {
     padding:10px;
     margin: 1vw 1vh;
 }
+
+
+
 /*main end*/
 /*index end*/
 /*submit page start*/
@@ -273,8 +201,8 @@ header {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 4px solid #232929;
-    color: #232929;
+    border-bottom: 4px solid #1c2f45;
+    color: #121e2b;
     box-shadow: 0 6px 6px -6px #232929;
 }
 .page-title h1 {
@@ -298,13 +226,16 @@ header {
     margin-top: 4vh;
     margin-bottom: 0;
 }
-.form-wrapper {
+.form-wrapper-custom {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 4vh;
     margin-bottom: 4vh;
     text-align: center;
+}
+label {
+    display: block;
 }
 .frm{
     font-family: 'Fira Mono', monospace;
@@ -483,9 +414,7 @@ header {
     font-size: 1em;
 }
 
-.game-video img{
-    width: 150px;
-    height: 150px;
+.game-video button{
     padding:10px;
     margin: auto;
     position: absolute;
@@ -494,15 +423,41 @@ header {
     margin-left: -60px;
     margin-top: -52px;
     cursor: pointer;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,.75));
     transition: opacity .3s ease-in-out;
     opacity: 1;
+    outline:none;
 
 }
-.game-video img:hover {
+.game-video button {
     transform: scale(1.15);
+}
+/*bootstrap modal*/
+.modal-btn {
+    background-color:transparent;
+    border:4px solid white;
+    border-radius: 50%;
+    transition: .2s ease-in
+}
+.modal-btn:hover {
+    transform: scale(1.2);
+}
+
+.modal-content {
+    background-color:rgba(28, 47, 69,0.8);
+    margin-top: 15vh;
+    padding: 10px;
+    border-radius: 5px;
 
 }
+.modal-content iframe {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 2px 2px #0b1119;
+    border-radius: 10px;
+}
+
+
 .main-page {
     width:80%;
     margin-left: auto;
@@ -611,4 +566,89 @@ header {
     margin-left: auto;
     margin-top: 3vh;
     padding-bottom: 1vh;
+}
+
+/*bootstrap carousel*/
+#featured-1 {
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imgs/hades-2.jpg");
+    background-size: cover;
+}
+#featured-2 {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imgs/discso-elysium.jpg");
+    background-size: cover;
+}
+#featured-3 {
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/frostpunk.jpg");
+    background-size: cover;
+}
+#newest-1 {
+    background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/hollowknight.jpg") ;
+    background-size: cover;
+}
+#newest-2 {
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/into-the-breach.jpg");
+    background-size: cover;
+}
+#newest-3 {
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/darkest-dungeon.jpg") ;
+    background-size: cover;
+}
+.carousel {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 4px 4px 4px 4px #232929;
+    border-radius: 10px;
+}
+.carousel-inner {
+    border-radius: 10px;
+}
+.carousel-item {
+    min-height: 500px;
+    background-color: #232929;
+    border: 2px solid #fff3d6;
+    border-radius: 10px;
+
+}
+.carousel-title-link {
+    font-family: 'Cinzel', serif;
+    color: #0b1119;
+    font-size: 4em;
+    margin-top:0;
+    text-decoration: none;
+    text-align: center;
+
+}
+.carousel-title-link a {
+    color: #fff3d6;
+    padding-top:0;
+    margin-top: 0;
+}
+
+.carousel-item a:hover {
+    text-decoration: underline;
+    color: #4b78a8;
+}
+.carousel-item h2 {
+    text-align: center;
+    font-family: 'Fira Mono', monospace;
+    color: #fff3d6;
+
+}
+.carousel-quick-title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #fff3d6;
+    margin-bottom: 1vh;
+
+}
+.carousel-quick-fact {
+    text-align: center;
+    color: #fff3d6;
+}
+.carousel-quick-fact ul li {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.5em;
+    list-style-type: none;
 }
