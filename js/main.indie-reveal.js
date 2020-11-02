@@ -1,7 +1,11 @@
+
+//this is the carousel control
 $('.carousel').carousel( {
     interval: 4000,
     pause: "hover"
 });
+
+//this is to stop video in modal and reload url on opening
 $(document).ready(function(){
     /* Get iframe src attribute value i.e. YouTube video url
     and store it in a variable */
@@ -19,3 +23,15 @@ $(document).ready(function(){
         $("#templateTrailer").attr('src', urlTrailerModal);
     });
 });
+
+
+//for the find a game search box
+$(document).ready(function () {
+    $("#searchInput").on("keyup", function (){
+       var value = $(this).val().toLowerCase();
+       $("#listTable tr").filter(function (){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+       });
+    });
+});
+

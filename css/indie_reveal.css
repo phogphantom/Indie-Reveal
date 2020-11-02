@@ -1,9 +1,11 @@
 /*TODO:
 finish footer
 redo table, maybe make the table into a template
-add in modal (bootstrap) for video
 do templating
 figure out how to get to template from image click
+make filter for table
+style game template page
+maybe make a carousel on game template page for screen shots
  */
 
 * {
@@ -48,12 +50,21 @@ html,body {
     margin-top:0;
     overflow: hidden
 }
-.footer-custom {
+.footer-custom footer {
     bottom:0;
     width:100%;
-    height:60px;			/* Height of the footer */
-    background:#0e273c;
+    height:80px;			/* Height of the footer */
+    background:#0b1119;
+    font-family: 'Fira Mono', monospace;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-custom footer a {
+    padding:10px;
     color: #e9ecec;
+}
+.footer-custom footer a:hover {
+    color: #2c4c6f;
 }
 /*fonts to use
 font-family: 'Fira Mono', monospace;
@@ -159,7 +170,6 @@ font-family: 'Roboto Slab', serif;
 .section-title {
     border-bottom: .01vh solid #0b1119;
     margin-bottom: 2vh;
-    margin-top: 4vh;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -171,6 +181,15 @@ font-family: 'Roboto Slab', serif;
     padding-left: 1vw;
     font-weight: 700;
     color: #1c2f45;
+
+}
+.section-title h3 {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    padding-left: 1vw;
+    font-weight: 700;
+    color: #1c2f45;
+    margin-top: 3vh;
 
 }
 
@@ -349,43 +368,55 @@ label {
     font-family: 'Cinzel', serif;
     font-size: .9em;
 }
-.table-headings {
-    display: flex;
-    justify-content: space-evenly;
-}
-.table-headings h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2em;
-    margin-right: 1vw;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-}
 .list-table {
     font-family: 'Fira Mono', monospace;
     border-collapse: collapse;
     width: 100%;
+    background-color: rgba(0, 0, 0,0.3);
+    margin-top: 1vh;
+    color: #fff3d6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
 }
 .list-table a {
-    color: #232929;
     font-family: 'Fira Mono', monospace;
     padding:10px;
     font-size: 1em;
-    font-weight: bold;
+    color: #feecbc;
 }
 .list-table a:hover {
     font-weight: normal;
 
 }
+.list-table img {
+    width:75px;
+    height:75px;
+    background-color: white;
+    color: black;
+    font-size:0.5em;
+    margin-right: .5vw;
+}
+.top-headings th {
+    border:none;
+    font-family: 'Cinzel', serif ;
+    font-size: 2em;
+    padding:10px;
+    text-align: center;
+}
+.table-sections th {
+    font-family: 'Cinzel', serif ;
+    font-size: 2em;
+    padding:10px;
+    border-bottom: 2px solid #0b1119;
+
+}
 .list-table td {
-    font-size: 1.5em;
-    border-bottom: 2px solid #232929;
-    padding-bottom: 1vh;
-    padding-right:9vw;
-    overflow: hidden;
+    font-size: 1.35em;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
 }
-.list-table tr:nth-child(odd) {
-    background-color: #e9ecec;
-}
+
 
 /*list end*/
 /*game template start*/
@@ -402,6 +433,7 @@ label {
     text-align: center;
     font-size: 4em;
     text-shadow: 2px 2px 4px #232929;
+    padding-top: 4vh;
 }
 .game-video {
     background-image: url("imgs/hades-2.jpg");
@@ -492,8 +524,14 @@ label {
     padding:10px;
     margin: 1vw 1vh;
 }
+.quick-facts-description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+    padding: 10px;
+}
 .desc-box {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -512,10 +550,10 @@ label {
 
 }
 .quick-fact {
-    float: left;
-    margin-top: 2vh;
     border: 2px solid #232929;
     padding: 10px;
+    border-radius: 10px;
+    max-height: 33vh;
 }
 .quick-fact h3 {
     font-family: 'Cinzel', serif;

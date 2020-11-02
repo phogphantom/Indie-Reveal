@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Full List</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -33,8 +34,8 @@
         </div>
         <div class="list-wrapper">
             <div class="filter-wrapper">
-            <label for="search-input" class="search-label">
-                <input type="text" id="search-input" class="search" placeholder="Search for a title">
+            <label for="searchInput" class="search-label">
+                <input type="text" id="searchInput" class="search" placeholder="Search for a title">
             </label>
                 <h2>Filter List by Genre:</h2>
             <label for="filter" class="filter-label">
@@ -55,86 +56,99 @@
             </label>
             </div>
             <div class="list">
-                <div class="table-headings">
-                    <h2>Game Title</h2>
-                    <h2>Genre</h2>
-                    <h2>Studio/Creator</h2>
-                    <h2>Release Date</h2>
-                </div>
-                <div class="list-section-title">
-                    <h1>A</h1>
-                </div>
                 <table class="list-table">
-                    <tr>
-                        <td class="td-a"><a href="game-page-template.html">A Game title 1</a></td>
-                        <td class="td-genre">text</td>
-                        <td>text</td>
-                        <td>date</td>
+                    <thead>
+                    <tr class="top-headings">
+                        <th>Game Title</th>
+                        <th>Genre</th>
+                        <th>Creator/Studio</th>
+                        <th>Release Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="listTable">
+                    <tr class="table-sections">
+                        <th>A</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td  class="td-a"><a href="game-page-template.html">A Game title 2</a></td>
-                        <td>text</td>
-                        <td>text</td>
-                        <td>date</td>
-                    </tr>
-                    <tr>
-                        <td  class="td-a"><a href="game-page-template.html">A Game title 3</a></td>
-                        <td>text</td>
-                        <td>text</td>
-                        <td>date</td>
-                    </tr>
-                </table>
-                <div class="list-section-title">
-                    <h1>B</h1>
-                </div>
-                <table class="list-table">
-                    <tr>
-                        <td  class="td-a"><a href="game-page-template.html">B Game title 1</a></td>
-                        <td class="td-genre">text</td>
-                        <td>text</td>
-                        <td>date</td>
-                    </tr>
-                    <tr>
-                        <td  class="td-a"><a href="game-page-template.html">B Game title 2</a></td>
+                        <td><a href="game-page-template.html"><img src="css/imgs/hades-2.jpg" alt="">A game title</a></td>
                         <td>text</td>
                         <td>text</td>
                         <td>date</td>
                     </tr>
                     <tr>
-                        <td class="td-a"><a href="game-page-template.html">B Game title 3</a></td>
-                        <td>text</td>
-                        <td>text</td>
-                        <td>date</td>
-                    </tr>
-                </table>
-                <div class="list-section-title">
-                    <h1>C</h1>
-                </div>
-                <table class="list-table">
-                    <tr>
-                        <td class="td-a"><a href="game-page-template.html">C Game title 1</a></td>
+                        <td><a href="game-page-template.html"><img src="#" alt="">A game title</a></td>
                         <td>text</td>
                         <td>text</td>
                         <td>date</td>
                     </tr>
                     <tr>
-                        <td class="td-a"><a href="game-page-template.html">C Game title 2</a></td>
+                        <td><a href="game-page-template.html"><img src="#" alt="">A game title</a></td>
+                        <td>text</td>
+                        <td>text</td>
+                        <td>date</td>
+                    </tr>
+                    <tr class="table-sections">
+                        <th>B</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="game-page-template.html"><img src="#" alt="">B game title</a></td>
                         <td>text</td>
                         <td>text</td>
                         <td>date</td>
                     </tr>
                     <tr>
-                        <td class="td-a"><a href="game-page-template.html">C Game title 3</a></td>
+                        <td><a href="game-page-template.html"><img src="#" alt="">B game title</a></td>
                         <td>text</td>
                         <td>text</td>
                         <td>date</td>
                     </tr>
+                    <tr>
+                        <td><a href="game-page-template.html"><img src="#" alt="">B game title</a></td>
+                        <td>text</td>
+                        <td>text</td>
+                        <td>date</td>
+                    </tr>
+                    <tr class="table-sections">
+                        <th>C</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a href="game-page-template.html"><img src="#" alt="">C game title</a></td>
+                        <td>text</td>
+                        <td>text</td>
+                        <td>date</td>
+                    </tr>
+                    <tr>
+                        <td><a href="game-page-template.html"><img src="#" alt="">C game title</a></td>
+                        <td>text</td>
+                        <td>text</td>
+                        <td>date</td>
+                    </tr>
+                    <tr>
+                        <td><a href="game-page-template.html"><img src="#" alt="">C game title</a></td>
+                        <td>text</td>
+                        <td>text</td>
+                        <td>date</td>
+                    </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
     <div class="footer-custom">
-
+        <footer>
+            <a href="submit.html">Submit</a>
+            <a href="index.html"><img class="nav_img"  src="#" alt="logo"></a>
+            <a href="about.html">About</a>
+        </footer>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
