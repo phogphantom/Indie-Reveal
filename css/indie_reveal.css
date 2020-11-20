@@ -653,22 +653,19 @@ label {
     border-radius: 10px;
 
 }
-.carousel-title-link {
+.carousel-title-link h1 {
     font-family: 'Cinzel', serif;
-    color: #0b1119;
     font-size: 4em;
     margin-top:0;
     text-decoration: none;
     text-align: center;
-
-}
-.carousel-title-link a {
     color: #fff3d6;
     padding-top:0;
     margin-top: 0;
+
 }
 
-.carousel-item a:hover {
+.carousel-item h1:hover {
     text-decoration: underline;
     color: #4b78a8;
 }

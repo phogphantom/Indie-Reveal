@@ -28,86 +28,8 @@
             </div>
         </header>
     </div>
-    <div class="game-temp-body">
-
-        <div class="game-video">
-            <div class="game-temp-page-title">
-                <h1>Game Title</h1>
-            </div>
-            <button type="button" class="modal-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="white"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-                </svg>
-            </button>
-            <div id="trailerModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <iframe id="templateTrailer" width="768" height="432" src="https://www.youtube.com/embed/mD8x5xLHRho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-page">
-            <div class="game-temp-screen-shots">
-                <img  src="#" alt="150x150">
-                <img  src="#" alt="150x150">
-                <img  src="#" alt="150x150">
-            </div>
-            <div class="quick-facts-description">
-                <div class="quick-fact">
-                    <h3>Quick Facts</h3>
-                    <ul class="quick-fact-list">
-                        <li>Game Title: Title</li>
-                        <li>Creator: Studio/Individual</li>
-                        <li>Genre: genre</li>
-                        <li>Release Date: 1/1/1900</li>
-                        <li>Platforms: PC,PS4,Switch</li>
-                        <li>Multiplayer: yes/no</li>
-                    </ul>
-                </div>
-                <div class="desc-box">
-
-                    <h2 class="section-title">Description</h2>
-                    <p>BATTLE OUT OF HELL
-                        As the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself, while growing stronger and unraveling more of the story with each unique escape attempt.
-
-                        UNLEASH THE FURY OF OLYMPUS
-                        The Olympians have your back! Meet Zeus, Athena, Poseidon, and many more, and choose from their dozens of powerful Boons that enhance your abilities. There are thousands of viable character builds to discover as you go.
-
-                        BEFRIEND GODS, GHOSTS, AND MONSTERS
-                        A fully-voiced cast of colorful, larger-than-life characters is waiting to meet you! Grow your relationships with them, and experience thousands of unique story events as you learn about what's really at stake for this big, dysfunctional family.
-
-                        BUILT FOR REPLAYABILITY
-                        New surprises await each time you delve into the ever-shifting Underworld, whose guardian bosses will remember you. Use the powerful Mirror of Night to grow permanently stronger, and give yourself a leg up the next time you run away from home.
-
-                        NOTHING IS IMPOSSIBLE
-                        Permanent upgrades mean you don't have to be a god yourself to experience the exciting combat and gripping story. Though, if you happen to be one, crank up the challenge and get ready for some white-knuckle action that will put your well-practiced skills to the test.
-
-                        SIGNATURE SUPERGIANT STYLE
-                        The rich, atmospheric presentation and unique melding of gameplay and narrative that's been core to Supergiant's games is here in full force: spectacular hand-painted environments and a blood-pumping original score bring the Underworld to life.</p>
-                </div>
-            </div>
-            <div class="game-temp-links-box">
-                <h2 class="section-title">Links</h2>
-                <div class="game-temp-links">
-                    <a href="#">Crowdsource</a>
-                    <a href="#">Youtube</a>
-                    <a href="#">Game Site</a>
-                    <a href="#">Creator Site</a>
-                </div>
-            </div>
-
-            <div class="recommended-games-box">
-                <h1 class="section-title">Recommend Games</h1>
-            <div class="recommended-games">
-                <a href="game-page-template.html"><img src="#" alt="150x150-rec.game"></a>
-                <a href="game-page-template.html"><img src="#" alt="150x150-rec.game"></a>
-                <a href="game-page-template.html"><img src="#" alt="150x150-rec.game"></a>
-                <a href="game-page-template.html"><img src="#" alt="150x150-rec.game"></a>
-            </div>
-        </div>
-    </div>
+    <div id="game-container"></div>
+    <div id="recommend-container"></div>
     <div class="footer-custom">
         <footer>
             <a href="submit.html">Submit</a>
@@ -116,10 +38,75 @@
         </footer>
     </div>
 </div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script id="gameTemplate" type="text/x-handlebars-template">
+    <div class="game-video">
+        <div class="game-temp-page-title">
+            <h1>{{name}}</h1>
+        </div>
+        <button type="button" class="modal-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="white"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+            </svg>
+        </button>
+        <div id="trailerModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <iframe id="templateTrailer" width="768" height="432" src="{{video}}" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="game-temp-screen-shots">
+            {{#each screenShots}}
+                <img  src="{{this}}" alt="150x150">
+            {{/each}}
+        </div>
+        <div class="quick-facts-description">
+            <div class="quick-fact">
+                <h3>Quick Facts</h3>
+                <ul class="quick-fact-list">
+                    {{#each quickfacts}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="desc-box">
+
+                <h2 class="section-title">Description</h2>
+                <p>{{description}}</p>
+            </div>
+        </div>
+        <div class="game-temp-links-box">
+            <h2 class="section-title">Links</h2>
+            <div class="game-temp-links">
+                {{#each links}}
+                    {{{this}}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</script>
+<script id="recommendTemplate" type="text/x-handlebars-template">
+    <div class="recommended-games-box">
+        <h1 class="section-title">Recommend Games</h1>
+        <div class="recommended-games">
+            {{#each images}}
+                <figure>
+                    <a href="#{{@index}}"><img src={{img-src}}></a>
+                    <figcaption>{{name}}      </figcaption>
+                </figure>
+            {{/each}}
+        </div>
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/main.indie-reveal.js"></script>
+<script src="js/handlebars-v4.7.6.js"></script>
+<script src="js/main.indie-reveal.js"></script>
 </body>
 </html>
