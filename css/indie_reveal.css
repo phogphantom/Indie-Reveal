@@ -1,11 +1,9 @@
 /*TODO:
-finish footer
 redo table, maybe make the table into a template
-do templating
 figure out how to get to template from image click
-make filter for table
-style game template page
 maybe make a carousel on game template page for screen shots
+make nav for mobile
+figure out why the video reset for the modal no longer works
  */
 
 * {
@@ -207,15 +205,25 @@ font-family: 'Roboto Slab', serif;
     display: flex;
     align-content: space-evenly;
     justify-content: center;
+    background-color: rgba(255,255,255,0.15);
+    width:75%;
+    margin-right:auto;
+    margin-left:auto;
+    border-radius: 5px;
 }
 .screen-shots img {
-    width: 150px;
-    height: 150px;
+    width: 271px;
+    height: 152px;
     background-color: white;
-    padding:10px;
     margin: 1vw 1vh;
+    cursor: pointer;
+    transition: .2s ease-in-out;
 }
-
+.screen-shots img:hover {
+    transform: scale(1.05);
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
+}
 
 
 /*main end*/
@@ -613,27 +621,27 @@ label {
 
 /*bootstrap carousel*/
 #featured-1 {
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imgs/hades-2.jpg");
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://lh3.googleusercontent.com/pciublpVQAa-x6qAjEM_U7V4DZsm2FYGbR0z4TPf2bdHr_E6vqjpKHOHkBEPT0sXnBWUK36gAVgqg17flfA-EYl8EEhY2ZZmbMdl3LR2t6a__bihVmX79dMMx9stDGAm8-9gDN-u=w600-h315-p-k");
     background-size: cover;
 }
 #featured-2 {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("imgs/discso-elysium.jpg");
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://lh3.googleusercontent.com/fIMrYiuivsIsmcdMETgRDoZuWaim7cx6WStpk8dVq7CqwRu91DN1mI-z5qCTxakl0oui4a1KJAZDqZ7RqNlfJBLag0aWEXdWT_yTEkdMAgs8e4wm7Ud452MGN1GEdLbTEUZmkcfD=w600-h315-p-k" );
     background-size: cover;
 }
 #featured-3 {
-    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/frostpunk.jpg");
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("https://lh3.googleusercontent.com/gLudBLEQx6sRx4AFz4tg1VkRZDgXUrK7de4WkM58dJnl234cAamunzsI-FhTM3ZQr5Zgb1OTxPIfuENTbZF2HUmesQIN6ZZ4X2I51ghiPNxH2menOwtXMb_tD3EhMemIYq3o1a-B=w600-h315-p-k" );
     background-size: cover;
 }
 #newest-1 {
-    background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/hollowknight.jpg") ;
+    background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("https://lh3.googleusercontent.com/ZjOZlU8Q36bnbbc-HjUT50qS9T3tOW4FJK5YRFqEZdhKWsoQUReNgHHH6Jn4F09p4XDgkGVeg03-oMltMOX_9XY7eSaN3YunojID-CeoIvsOGNN5zQlIQJ0IHTJwTOxttTJOMj9m=w600-h315-p-k" ) ;
     background-size: cover;
 }
 #newest-2 {
-    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/into-the-breach.jpg");
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("https://lh3.googleusercontent.com/tL8dLryqmjVxTZzeIK5jGr6aoZ3zhJJ001Rvb_WW6ueLjO1iYF5Q5spvSc9Di6TsRm1LkBFt2x33ryQehypo6PuKR84BE8LUcC9QpC25H959S4Dm64ZoA89FcbWKxdXtWoVki197=w600-h315-p-k" );
     background-size: cover;
 }
 #newest-3 {
-    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("imgs/darkest-dungeon.jpg") ;
+    background: linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url("https://lh3.googleusercontent.com/nqxlcFl2xXMT0sfc4abfFmOy3hQXKIhP78xQABi_Yp6nyfIofmfFOAH4VD8uhuw4-4pxAPxu1h7xIPi42neAZFTDNgGyUxwMJT1jvWQSxZ_JOsvTehvWK9VvwSaFXiSmNaW7ylZu=w600-h315-p-k" ) ;
     background-size: cover;
 }
 .carousel {
@@ -661,7 +669,6 @@ label {
     text-align: center;
     color: #fff3d6;
     padding-top:0;
-    margin-top: 0;
 
 }
 
@@ -691,4 +698,18 @@ label {
     font-family: 'Fira Mono', monospace;
     font-size: 1.5em;
     list-style-type: none;
+}
+#lightbox {
+    position:fixed;
+    z-index:99999;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.8);
+    display:none;
+}
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
