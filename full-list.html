@@ -7,16 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/indie_reveal.css">
 
 </head>
 <body class="index_body">
 <div class="container-custom">
+    <div class="mobile-nav-custom">
+        <a href="index.html" class="mobile-active">Indie Reveal</a>
+        <div id="mobile-links">
+            <a href="full-list.html">FULL LIST</a>
+            <a href="submit.html">SUBMIT</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" id="mobileHamburger">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <div class="header-custom">
         <header>
             <div class ="nav-custom">
 
-                <img class="nav_img" src="#" alt="50x50">
+                <a href="index.html"><img class="nav_img" src="css/imgs/indie-reveal-logo.png" alt="50x50"></a>
                 <nav class="nav_list">
                     <ul>
                         <li><a href="index.html">HOME</a></li>
@@ -37,23 +49,6 @@
             <label for="searchInput" class="search-label">
                 <input type="text" id="searchInput" class="search" placeholder="Search for a title">
             </label>
-                <h2>Filter List by Genre:</h2>
-            <label for="filter" class="filter-label">
-                <select name="genre" id="filter" class="filter" required>
-                    <option value="" selected>All</option>
-                    <option>Action-Adventure</option>
-                    <option>Battle Royale</option>
-                    <option>Fighting</option>
-                    <option>First Person Shooter</option>
-                    <option>Massively Multiplayer Online</option>
-                    <option>Racing</option>
-                    <option>Role Playing</option>
-                    <option>Sandbox</option>
-                    <option>Simulation</option>
-                    <option>Sports</option>
-
-                </select>
-            </label>
             </div>
             <div class="list">
                 <table class="list-table">
@@ -73,13 +68,13 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Darkest Dungeon</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Darkest Dungeon</td>
                         <td>RPG/Rouge-like</td>
                         <td>Red Hook Studios/Sick Head Games</td>
                         <td>02/03/2015</td>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Disco Elysium</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Disco Elysium</td>
                         <td>RPG/CRPG</td>
                         <td>ZA/UM</td>
                         <td>10/15/2019</td>
@@ -91,7 +86,7 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Frost Punk</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Frostpunk</td>
                         <td>City-building/Survival</td>
                         <td>11 Bit Studios</td>
                         <td>04/24/2018</td>
@@ -103,13 +98,13 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Hades</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Hades</td>
                         <td>RPG/Rouge-like</td>
                         <td>Supergiant Games</td>
                         <td>12/06/2018</td>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Hollow Knight</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Hollow Knight</td>
                         <td>Action-Adventure/RPG</td>
                         <td>Team Cherry</td>
                         <td>02/24/2017</td>
@@ -121,7 +116,7 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td><a href="game-page-template.html"><img src="#" alt="">Into the Breach</a></td>
+                        <td class = "td-link" onclick="loadGamePage(event)">Into the Breach</td>
                         <td>Turn Based tactic</td>
                         <td>Subset Games</td>
                         <td>02/27/2018</td>
@@ -134,7 +129,7 @@
     <div class="footer-custom">
         <footer>
             <a href="submit.html">Submit</a>
-            <a href="index.html"><img class="nav_img"  src="#" alt="logo"></a>
+            <a href="index.html"><img class="nav_img"  src="css/imgs/indie-reveal-logo.png" alt="logo"></a>
             <a href="about.html">About</a>
         </footer>
     </div>
