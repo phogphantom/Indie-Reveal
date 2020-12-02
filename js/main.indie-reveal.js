@@ -17,8 +17,8 @@ window.addEventListener("click",e=>{
 
 //this is the carousel control
 $('.carousel').carousel( {
-    interval: 4000,
-    pause: "hover"
+    interval: 4000,//displays each slide for 4 seconds
+    pause: "hover"//pauses when mouse hovers over slide
 });
 
 //for the find a game search box
@@ -34,12 +34,12 @@ $(document).ready(function () {
 
 //lightbox
 $(document).ready(function () {
-    const lightbox = document.createElement('div');
-    const images = document.querySelectorAll('.screen-shots img');
-    lightbox.id = 'lightbox';
-    document.body.appendChild(lightbox);
-
-
+    const lightbox = document.createElement('div');//creates a new div elment
+    const images = document.querySelectorAll('.screen-shots img');//selects all img elements in screen-shots class
+    lightbox.id = 'lightbox'; //adds the lightbox id to the created div
+    document.body.appendChild(lightbox);//adds the element to the DOM
+    
+    //adds a click listener for all images in screen-shots class and appends div and img to dom
     images.forEach(image => {
         image.addEventListener('click', e => {
             lightbox.classList.add('active')
@@ -51,13 +51,14 @@ $(document).ready(function () {
             lightbox.appendChild(img)
         })
     })
-
+    //adds event listener to close the lightbox if anything other then the light box is clicked
     lightbox.addEventListener('click', e => {
         if (e.target !== e.currentTarget) return
         lightbox.classList.remove('active')
     });
 });
 
+//mobile nav hide/show
 $('#mobileHamburger').on('click',function (){
     $('#mobile-links').toggle();
 });

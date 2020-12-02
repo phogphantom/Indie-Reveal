@@ -24,8 +24,6 @@ request1.onload = function () {
            lightboxFunction();
            videoTrailerReset();
         });
-
-
     } else {
         console.log("The server returned an error.");
     }
@@ -65,15 +63,11 @@ request2.onerror = function () {
 request2.send();
 
 function createHTMLGameTemplate(gameData,i) {
-    var rawTemplate = document.getElementById("gameTemplate").innerHTML;
-    var compiledTemplate = Handlebars.compile(rawTemplate);
-
-
-    var generatedHTML = compiledTemplate(gameData.games[i]);
-
-    var gameContainer = document.getElementById("game-container");
-    gameContainer.innerHTML = generatedHTML;
-
+    var rawTemplate = document.getElementById("gameTemplate").innerHTML;//template scirpt id
+    var compiledTemplate = Handlebars.compile(rawTemplate);//handlebars compiles template
+    var generatedHTML = compiledTemplate(gameData.games[i]);//sets paramaters for data
+    var gameContainer = document.getElementById("game-container");//sets the where the implate will be inserted
+    gameContainer.innerHTML = generatedHTML;//puts template in correct div
 }
 
 function createHTMLRecommend(recommendImgData) {
